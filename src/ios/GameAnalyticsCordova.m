@@ -407,4 +407,38 @@
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
+- (void)addImpressionMopubEvent:(CDVInvokedUrlCommand*)command
+{
+    NSString* adNetworkVersion = [command.arguments objectAtIndex:0];
+    NSDictionary* impressionData = [command.arguments objectAtIndex:1];
+
+    [GameAnalytics addImpressionMopubEventWithAdNetworkVersion:adNetworkVersion impressionData:impressionData];
+
+    CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+}
+
+- (void)addImpressionFyberEven:(CDVInvokedUrlCommand*)command
+{
+    NSString* adNetworkVersion = [command.arguments objectAtIndex:0];
+    NSDictionary* impressionData = [command.arguments objectAtIndex:1];
+
+    [GameAnalytics addImpressionFyberEventWithAdNetworkVersion:adNetworkVersion impressionData:impressionData];
+
+    CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+}
+
+- (void)addImpressionIronSourceEvent:(CDVInvokedUrlCommand*)command
+{
+    NSString* adNetworkVersion = [command.arguments objectAtIndex:0];
+    NSDictionary* impressionData = [command.arguments objectAtIndex:1];
+
+    [GameAnalytics addImpressionIronSourceEventWithAdNetworkVersion:adNetworkVersion impressionData:impressionData];
+
+    CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+}
+
+
 @end

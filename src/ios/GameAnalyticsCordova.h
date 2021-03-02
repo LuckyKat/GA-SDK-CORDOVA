@@ -30,5 +30,8 @@
 - (void)isRemoteConfigsReady:(CDVInvokedUrlCommand*)command;
 - (void)getABTestingId:(CDVInvokedUrlCommand*)command;
 - (void)getABTestingVariantId:(CDVInvokedUrlCommand*)command;
+- (void)addImpressionMopubEvent:(CDVInvokedUrlCommand*)command;
+- (void)addImpressionFyberEvent:(CDVInvokedUrlCommand*)command;
+- (void)addImpressionIronSourceEvent:(CDVInvokedUrlCommand*)command;
 
 @end

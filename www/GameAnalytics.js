@@ -199,6 +199,19 @@ GameAnalytics.getABTestingVariantId = function(onComplete) {
     exec(onComplete, GameAnalytics._gameAnalyticsErrorEvent, PLUGIN_NAME, 'getABTestingVariantId', []);
 };
 
+GameAnalytics.addImpressionMopubEvent = function(version, impressionData, onComplete) {
+    console.log("GameAnalytics.addImpressionMopubEvent");
+    exec(onComplete, GameAnalytics._gameAnalyticsErrorEvent, PLUGIN_NAME, 'addImpressionMopubEvent', [version, impressionData]);
+};
+GameAnalytics.addImpressionFyberEvent = function(version, impressionData, onComplete) {
+    console.log("GameAnalytics.addImpressionFyberEvent");
+    exec(onComplete, GameAnalytics._gameAnalyticsErrorEvent, PLUGIN_NAME, 'addImpressionFyberEvent', [version, impressionData]);
+};
+GameAnalytics.addImpressionIronSourceEvent = function(version, impressionData, onComplete) {
+    console.log("GameAnalytics.addImpressionIronSourceEvent");
+    exec(onComplete, GameAnalytics._gameAnalyticsErrorEvent, PLUGIN_NAME, 'addImpressionIronSourceEvent', [version, impressionData]);
+};
+
 /******************************************************************************************************************/
 /*                                                PRIVATE/INTERNAL                                                */
 /******************************************************************************************************************/

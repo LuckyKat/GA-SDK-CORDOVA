@@ -436,6 +436,27 @@ public class GameAnalyticsCordova extends CordovaPlugin
             callbackContext.sendPluginResult(new PluginResult(Status.OK, result));
             return true;
         }
+        else if(action.equals("addImpressionMopubEvent"))
+        {
+            String version = data.optString(0, "");
+            JSONObject impressionData = data.optJSONObject(1);
+            GameAnalytics.addImpressionMoPubEvent(version, impressionData);
+            return true;
+        }
+        else if(action.equals("addImpressionFyberEvent"))
+        {
+            String version = data.optString(0, "");
+            JSONObject impressionData = data.optJSONObject(1);
+            GameAnalytics.addImpressionFyberEvent(version, impressionData);
+            return true;
+        }
+        else if(action.equals("addImpressionIronSourceEvent"))
+        {
+            String version = data.optString(0, "");
+            JSONObject impressionData = data.optJSONObject(1);
+            GameAnalytics.addImpressionIronSourceEvent(version, impressionData);
+            return true;
+        }
 
         return false;
     }
