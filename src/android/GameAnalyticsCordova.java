@@ -441,6 +441,7 @@ public class GameAnalyticsCordova extends CordovaPlugin
             String version = data.optString(0, "");
             JSONObject impressionData = data.optJSONObject(1);
             GameAnalytics.addImpressionMoPubEvent(version, impressionData);
+            callbackContext.sendPluginResult(new PluginResult(Status.OK, result));
             return true;
         }
         else if(action.equals("addImpressionFyberEvent"))
@@ -448,6 +449,7 @@ public class GameAnalyticsCordova extends CordovaPlugin
             String version = data.optString(0, "");
             JSONObject impressionData = data.optJSONObject(1);
             GameAnalytics.addImpressionFyberEvent(version, impressionData);
+            callbackContext.sendPluginResult(new PluginResult(Status.OK, result));
             return true;
         }
         else if(action.equals("addImpressionIronSourceEvent"))
@@ -455,6 +457,7 @@ public class GameAnalyticsCordova extends CordovaPlugin
             String version = data.optString(0, "");
             JSONObject impressionData = data.optJSONObject(1);
             GameAnalytics.addImpressionIronSourceEvent(version, impressionData);
+            callbackContext.sendPluginResult(new PluginResult(Status.OK, result));
             return true;
         }
 
