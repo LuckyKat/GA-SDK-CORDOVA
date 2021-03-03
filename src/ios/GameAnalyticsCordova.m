@@ -418,7 +418,7 @@
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
-- (void)addImpressionFyberEven:(CDVInvokedUrlCommand*)command
+- (void)addImpressionFyberEvent:(CDVInvokedUrlCommand*)command
 {
     NSString* adNetworkVersion = [command.arguments objectAtIndex:0];
     NSDictionary* impressionData = [command.arguments objectAtIndex:1];
